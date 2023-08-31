@@ -141,7 +141,7 @@ open class FoundationStream : NSObject, WSStream, StreamDelegate  {
     public weak var delegate: WSStreamDelegate?
     let BUFFER_MAX = 4096
 	
-	public var enableSOCKSProxy = false
+	public var enableSOCKSProxy = true
     
     public func connect(url: URL, port: Int, timeout: TimeInterval, ssl: SSLSettings, completion: @escaping ((Error?) -> Void)) {
         var readStream: Unmanaged<CFReadStream>?
